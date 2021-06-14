@@ -1,0 +1,95 @@
+body{
+	background-color: silver;
+}
+a:hover{
+	color: white;
+}
+.top-container{
+	display: flex;
+	width:100%;
+	background-color: rgb(105,105,105);
+	color: silver;
+	text-align: center;
+	height: 25px;
+	justify-content: center;
+}
+.contents{
+	font-size: 0.5cm;
+	margin-top: 2px;
+}
+.largecontents{
+	font-size: 0.5cm;
+	margin-top: 2px;
+	text-align: center;
+	justify-content: center;
+}
+.bottom-container{
+  width: 100%;
+}
+.flex-bottom-container{
+  width: 100%;
+  display:flex;
+  background-color:rgb(105,105,105);
+  height: 30px;
+  color: white;
+}
+#linkedin-icon{
+  height: 25px;
+  width: 30px;
+  margin-top: 2.5px;
+  margin-left: 20px;
+}
+#linkedin-icon:hover{
+  height: 30px;
+  width: 35px;
+  margin-top: 0px;
+ }
+#twitter-icon{
+  height: 25px;
+  width: 30px;
+  margin-top: 2.5px;
+  margin-left: 20px;
+}
+#twitter-icon:hover{
+  height: 30px;
+  width: 35px;
+  margin-top: 0px;
+ }
+#facebook-icon{
+  height: 25px;
+  width: 30px;
+  margin-top: 2.5px;
+  margin-left: 20px;
+}
+#facebook-icon:hover{
+  height: 30px;
+  width: 35px;
+  margin-top: 0px;
+ }
+#gmail-icon{
+  height: 25px;
+  width: 30px;
+  margin-top: 2.5px;
+  margin-left: 20px;
+}
+#gmail-icon:hover{
+  height: 30px;
+  width: 35px;
+  margin-top: 0px;
+ }
+.copyright-details{
+  margin-top: 10px;
+  width:80%;
+  text-align: left;
+  margin-left: 5px;
+}
+.image-row{
+  display: flex;
+  align-items: center;
+  height:150px;
+  justify-content: center;
+}
+#image{
+  margin:2%;
+  height : 120px;
+  
