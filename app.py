@@ -17,7 +17,7 @@ import uvicorn
 # Never import * when deploying a code, I'm doing this cos this code is just for fun, only import what you need.
 from fastai.vision.all import *
 from io import BytesIO
-import cv2
+#import cv2
 
 # import pathlib, i needed this during the test on my local pc.
 import pathlib
