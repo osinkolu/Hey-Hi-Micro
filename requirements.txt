@@ -8,3 +8,4 @@ opencv-python>=2.0.0
 pathlib>=1.0.0
 python-multipart
 aiofiles
+jinja2
