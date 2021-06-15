@@ -38,9 +38,9 @@ async def homepage(request:Request):
     return templates.TemplateResponse("index.html", {"request": request, "user_image":"/static/web_images/avatar.png"})
 
 #load in my models via fastai's load_learner method. 
-gender_model = load_learner('Gender_model/export.pkl')
-race_model = load_learner('Race_model/export.pkl')
-age_model = load_learner('Age_model/export.pkl')
+#gender_model = load_learner('Gender_model/export.pkl')
+#race_model = load_learner('Race_model/export.pkl')
+#age_model = load_learner('Age_model/export.pkl')
 
 # Time to infer from the model
 @app.post('/predict',response_class = HTMLResponse)
