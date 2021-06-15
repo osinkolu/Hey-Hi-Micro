@@ -4,7 +4,7 @@
 numpy==1.16.5
 Flask==1.1.1
 gunicorn==19.9.0
-fastai>=2.2.5
+#fastai>=2.2.5
 opencv-python>=2.0.0
 pathlib>=1.0.0
 
