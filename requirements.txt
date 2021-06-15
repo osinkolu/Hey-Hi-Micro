@@ -1,9 +1,9 @@
--f https://download.pytorch.org/whl/torch_stable.html
-torch==1.8.1+cpu 
-torchvision==0.9.1+cpu
+#-f https://download.pytorch.org/whl/torch_stable.html
+#torch==1.8.1+cpu 
+#torchvision==0.9.1+cpu
 fastapi
 uvicorn
-fastai
+#fastai
 opencv-python>=2.0.0
 pathlib>=1.0.0
 python-multipart
