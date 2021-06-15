@@ -15,7 +15,7 @@ from fastapi.templating import Jinja2Templates
 import uvicorn
 
 # Never import * when deploying a code, I'm doing this cos this code is just for fun, only import what you need.
-from fastai.vision.all import *
+#from fastai.vision.all import *
 from io import BytesIO
 #import cv2
 
