@@ -5,7 +5,6 @@ fastapi
 uvicorn
 fastai>=2.2.5
 opencv-python==4.4.0.46
-opencv-contrib-python==4.2.0.34
 #pathlib==1.0.0
 python-multipart
 aiofiles
