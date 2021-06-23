@@ -2,7 +2,7 @@
 <html>
 <head>
   <title> Hey! Hi! </title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about_me.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='about_me.css') }}">
 </head>
 <body>
   <div class="top-container">
@@ -13,8 +13,7 @@
 
 Hi folks, A machine learning model which i've trained makes the predictions, details about how it was created, and it's level of accuracy can be found in my github repository <a href="http://www.github.com/osinkolu"> here</a>.
 <p>
-  
-</p>
+	</p>
 <body>
  <div class="largecontents">
   <h1>What can you tell about me?</h1>
@@ -23,8 +22,10 @@ Hi folks, A machine learning model which i've trained makes the predictions, det
     <div>
     <form action="{{ url_for('predict')}}"method="post" enctype=multipart/form-data>
 
-    <label>Upload image</label>
+
+    	<label>Upload your picture</label>
   <input type="file" name=file accept="image/*" capture="camera" onchange="loadFile(event)">
+
 <script>
   var loadFile = function(event) {
     var output = document.getElementById('output');
@@ -33,7 +34,9 @@ Hi folks, A machine learning model which i've trained makes the predictions, det
       URL.revokeObjectURL(output.src) // free memory
     }
   };
-</script
+</script>
+
+
  </div>
     <br>
    <br>
@@ -43,7 +46,7 @@ Hi folks, A machine learning model which i've trained makes the predictions, det
 
     </form>
 
-   <br>
+       <br>
    <br>
    {{ prediction_text }}
 
@@ -51,12 +54,13 @@ Hi folks, A machine learning model which i've trained makes the predictions, det
     <p> </p>
    <p> </p>
 
-   Tools:
+
+      Tools:
    <p> </p>
    <div class="image-row">
-    <img id="image" src= "{{ url_for('static', filename='web_images/fastai.png') }}">
-    <img id="image" src= "{{ url_for('static', filename='web_images/colab.png') }}">
-    <img id="image" src= "{{ url_for('static', filename='web_images/opencv.png') }}">
+    <img id="image" src= "{{ url_for('static', path='web_images/fastai.png') }}">
+    <img id="image" src= "{{ url_for('static', path='web_images/colab.png') }}">
+    <img id="image" src= "{{ url_for('static', path='web_images/opencv.png') }}">
   </div>
 
 
@@ -67,12 +71,12 @@ Hi folks, A machine learning model which i've trained makes the predictions, det
 <div class="bottom-container">
     <div class="flex-bottom-container">
       <div class="copyright-details">
-      copyright &copy 2020 <a href="osinkolu.github.io" target="_blank">OlufemiVictorWebsite.</a> Designed and developed by Olufemi Victor.
+      copyright &copy 2020 <a href="https://osinkolu.github.io" target="_blank">OlufemiVictorWebsite.</a> Designed and developed by Olufemi Victor.
       </div>
-      <a href="mailto: femiosinkolu@gmail.com" target= _blank><img id="gmail-icon" src="{{ url_for('static', filename='web_images/gmail.png') }}"></a>
-      <a href="https://www.linkedin.com/in/victor-olufemi-a44924192/" target= _blank><img id="linkedin-icon" src="{{ url_for('static', filename='web_images/linkedin.png') }}"></a>
-      <a href="https://twitter.com/profvictor001" target= _blank><img id="twitter-icon" src="{{ url_for('static', filename='web_images/twitter.png') }}"></a>
-      <a href="https://www.facebook.com/profile.php?id=100009859840576" target= _blank><img id="facebook-icon" src="{{ url_for('static', filename='web_images/facebook.png') }}"></a>
+      <a href="mailto: femiosinkolu@gmail.com" target= _blank><img id="gmail-icon" src="{{ url_for('static', path='web_images/gmail.png') }}"></a>
+      <a href="https://www.linkedin.com/in/victor-olufemi-a44924192/" target= _blank><img id="linkedin-icon" src="{{ url_for('static', path='web_images/linkedin.png') }}"></a>
+      <a href="https://twitter.com/profvictor001" target= _blank><img id="twitter-icon" src="{{ url_for('static', path='web_images/twitter.png') }}"></a>
+      <a href="https://www.facebook.com/profile.php?id=100009859840576" target= _blank><img id="facebook-icon" src="{{ url_for('static', path='web_images/facebook.png') }}"></a>
     </div>
   </div>
 
