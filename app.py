@@ -34,7 +34,7 @@ app = Flask(__name__)
 
 @app.route('/') # this means when i call the home page, by default it loads the home.
 def home():
-    return render_template('index.html',user_image=image_path)
+    return render_template('templates/index.html',user_image=image_path)
 
 #load in my models via fastai's load_learner method. 
 #gender_model = load_learner('Gender_model/export.pkl')
