@@ -35,8 +35,8 @@ templates = Jinja2Templates(directory="templates") # Jinja 2 needs to know where
 
 @app.get('/', response_class = HTMLResponse) # this means when i call the home page, by default it loads the home.
 async def index(request:Request):
-    return ("This guy works well")
-    #return templates.TemplateResponse("index.html", {"request": request, "user_image":"/static/web_images/avatar.png"})
+    #return ("This guy works well")
+    return templates.TemplateResponse("index.html", {"request": request, "user_image":"/static/web_images/avatar.png"})
 
 #load in my models via fastai's load_learner method. 
 #gender_model = load_learner('Gender_model/export.pkl')
