@@ -4,8 +4,8 @@ torchvision==0.9.1+cpu
 fastapi
 uvicorn
 fastai>=2.2.5
-opencv-python==2.0.0
-pathlib==1.0.0
+opencv-python>=2.0.0
+#pathlib==1.0.0
 python-multipart
 aiofiles
 jinja2
