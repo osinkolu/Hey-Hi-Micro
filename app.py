@@ -77,7 +77,7 @@ async def predict(request:Request, file:UploadFile = File(...)):
             face_finder = "I couldn't find your face in the image, but still"
                 
             print(confidence)
-        Dir.mkdir(File.join(Rails.root, 'tmp'))
+        Rails.root.join('tmp')
         image_path = "tmp/temporary.jpg"
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         (h, w) = image.shape[:2]
