@@ -77,7 +77,7 @@ async def predict(request:Request, file:UploadFile = File(...)):
             face_finder = "I couldn't find your face in the image, but still"
                 
             print(confidence)
-        image_path = "static/temporary.jpg"
+        image_path = "tmp/temporary.jpg"
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         cv2.imwrite(image_path, image) #i'll have to save the image temporarily to display in my HTML code
         
