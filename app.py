@@ -17,7 +17,7 @@ import uvicorn
 # Never import * when deploying a code, I'm doing this cos this code is just for fun, only import what you need.
 from fastai.vision.all import *
 from io import BytesIO
-#import cv2
+import cv2
 
 # import pathlib, i needed this during the test on my local pc.
 #import pathlib
@@ -56,7 +56,6 @@ async def predict(request:Request, file:UploadFile = File(...)):
         """ NOTE THAT YOUR ADDRESS OF PROTOTXTPATH AND WEIGHTSPATH SHOULD BE SIMILAR TO THAT OF OpenCV's I.E ...../face_detector/ the file to load"""
             
         #Setting up the network
-        import cv2
         net = cv2.dnn.readNet(prototxtPath, weightspath)# opencv loads model up.
         blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 1.0, (300,300), (104.0,177.0,123.0)) #imagenet stats
         
