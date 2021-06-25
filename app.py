@@ -77,8 +77,13 @@ async def predict(request:Request, file:UploadFile = File(...)):
             face_finder = "I couldn't find your face in the image, but still"
                 
             print(confidence)
-        image_path = "tmp/temporary.jpg"
+        image_path = "static/temporary.jpg"
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        (h, w) = image.shape[:2]
+        box = detections[0,0,0,3:7] * np.array([w,h,w,h])
+        (startX, startY, endX, endY) = box.astype("int")
+        y = startY -10 if startY -10 > 10 else startY + 10
+        cv2.rectangle(image, (startX, startY), (endX,endY), (0,225,0),15)
         cv2.imwrite(image_path, image) #i'll have to save the image temporarily to display in my HTML code
         
         #Getting the prediction from the fastai models
